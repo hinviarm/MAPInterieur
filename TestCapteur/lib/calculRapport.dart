@@ -1,9 +1,12 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
+
 double calculateScaleFactor(List<double> sideLengths, List<double> distancesFromPoint) {
   double cote = sqrt((distancesFromPoint[0]/sqrt(distancesFromPoint[1]))
       *(((pow(distancesFromPoint[2],2)/distancesFromPoint[0])*
           sqrt(distancesFromPoint[1]))+(pow(distancesFromPoint[1],2))));
+  debugPrint('cote ============== '+ cote.toString());
   /*
   // Vérifie que les listes ont la taille appropriée
   if (sideLengths.length != 3 || distancesFromPoint.length != 3) {
